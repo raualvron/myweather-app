@@ -1,0 +1,12 @@
+<div class="col-md-12 city-name">
+<p><h4> You weather in <strong>{{weather.city.name}}</strong>&nbsp;&nbsp;&nbsp;
+	<img style="height:50px; margin-bottom:10px;" src="css/flags/{{flagiso}}">
+</h4>
+<div class="col-md-6 block-city"  ng-repeat="city in weather.list">
+	<p><i class="fa fa-clock-o" aria-hidden="true"></i>  {{city.dt |replaceDateWithHours}}</p>
+	<img  src="http://openweathermap.org/img/w/{{city.weather[0].icon}}.png">
+	~ <strong>{{city.weather[0].main}}</strong> ~ {{city.weather[0].description}} ~
+	<p>Temp: {{city.main.temp}}&deg;C | Min: {{city.main.temp_min}}&deg;C | Max: {{city.main.temp_max}}&deg;C
+	<p>Pressure: {{city.main.pressure}} hPa | Humidity: {{city.main.humidity}}&#37;</p>
+</div>
+</div>

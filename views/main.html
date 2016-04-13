@@ -1,0 +1,12 @@
+<div class="city-name col-md-12">
+	MyWeather in <strong>{{weather.city.name}}</strong> ~ Lon: {{weather.city.coord.lon}} | Lat: {{weather.city.coord.lat}} | <img style="height:50px; margin-bottom:10px;" src="css/flags/{{iso}}">
+</div>
+
+<div class="col-md-6 block-city"  ng-repeat="city in weather.list">
+	<p><i class="fa fa-clock-o" aria-hidden="true"></i>  {{city.dt |replaceDate}}</p>
+	<img  src="http://openweathermap.org/img/w/{{city.weather[0].icon}}.png">
+	~ <strong>{{city.weather[0].main}}</strong> ~ {{city.weather[0].description}} ~
+	<p>Temp: {{city.temp.day}}&deg;C | Min: {{city.temp.min}}&deg;C | Max: {{city.temp.max}}&deg;C
+	<p>Morn: {{city.temp.morn}}&deg;C | Eve: {{city.temp.eve}}&deg;C | Night: {{city.temp.night}}&deg;C</p>
+	<p>Pressure: {{city.pressure}} hPa | Humidity: {{city.humidity}}&#37;</p>
+</div>
