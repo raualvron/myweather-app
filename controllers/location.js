@@ -15,7 +15,7 @@ angular.module('myWeather')
         var geoJSON;
         var request;
         var gettingData = false;
-        var openWeatherMapKey = "79f03da162350e0c7039e600e4dfc06d";
+        var openWeatherMapKey = "";
         //Getting geolocation..
 
         myWeatherService.getGeolocation().then(function (position) {

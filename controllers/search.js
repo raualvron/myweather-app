@@ -17,6 +17,7 @@
  	myWeatherService.getWeatherByName(city, "forecast").then(function(response){
  		$scope.weather = response.data;
  		iso = $scope.weather.city.country;
+ 		
  		myWeatherService.getFlag(iso).then(function(response){
  			$.each(response.data, function(i, v) {
  				if (v.iso == iso) {
@@ -24,6 +25,7 @@
  				}
  			});
  		});
+ 		
  	});
 
 
